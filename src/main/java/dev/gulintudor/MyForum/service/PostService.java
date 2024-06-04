@@ -42,4 +42,8 @@ public class PostService {
         }
         postRepository.deleteById(postId);
     }
+
+    public void deletePostByUsernameAndTopicTitle(String username, String topicTitle) {
+        postRepository.deleteByUsernameAndTopicTitle(username, topicTitle);
+    }
 }

@@ -1,0 +1,15 @@
+<h2>Add Topic</h2>
+<form [formGroup]="topicForm" (submit)="addTopic()">
+  <div>
+    <label for="title">Title:</label>
+    <input
+      type="text"
+      id="title"
+      formControlName="title"
+      name="title"
+      required
+    />
+  </div>
+  <button type="submit">Add Topic</button>
+  <button type="button" (click)="goBack()">Go Back</button>
+</form>

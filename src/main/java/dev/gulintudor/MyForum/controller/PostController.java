@@ -54,4 +54,14 @@ public class PostController {
             return ResponseEntity.badRequest().body(e.getMessage());
         }
     }
+
+    @PostMapping("/delete")
+    public ResponseEntity<?> deletePostByUsernameAndTopicTitle(@RequestBody Post post) {
+        try {
+            postService.deletePostByUsernameAndTopicTitle(post.getUsername(), post.getTopicTitle());
+            return ResponseEntity.ok("Post deleted");
+        } catch (Exception e) {
+            return ResponseEntity.badRequest().body(e.getMessage());
+        }
+    }
 }

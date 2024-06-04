@@ -28,6 +28,11 @@ public class TopicController {
         return new ResponseEntity<Optional<Topic>>(topicService.getTopicById(id), HttpStatus.OK);
     }
 
+    @GetMapping("/title")
+    public ResponseEntity<Topic> getTopicByTitle(@RequestParam String title) {
+        return new ResponseEntity<Topic>(topicService.getTopicByTitle(title), HttpStatus.OK);
+    }
+
     @PostMapping
     public ResponseEntity<?> createTopic(@RequestBody Topic topic) {
         try {

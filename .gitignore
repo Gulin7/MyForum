@@ -34,3 +34,5 @@ build/
 
 ### ENV Files ###
 .env
+/frontend/node_modules/.bin
+/frontend/node_modules

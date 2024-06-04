@@ -10,4 +10,7 @@ import java.util.List;
 @Repository
 public interface PostRepository extends MongoRepository<Post, ObjectId> {
     List<Post> findByTopicTitle(String topicTitle);
+
+    void deleteByUsernameAndTopicTitle(String username, String topicTitle);
+
 }

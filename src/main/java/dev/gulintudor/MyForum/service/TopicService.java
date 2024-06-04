@@ -28,6 +28,10 @@ public class TopicService {
         return topicRepository.findById(id);
     }
 
+    public Topic getTopicByTitle(String title){
+        return this.topicRepository.findByTitle(title);
+    }
+
     public Topic createTopic(String title, String username){
 
         if(userRepository.findByUsername(username) == null){

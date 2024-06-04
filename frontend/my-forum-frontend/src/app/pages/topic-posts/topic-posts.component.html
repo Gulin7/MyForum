@@ -1,0 +1,28 @@
+<!-- topic-posts.component.html -->
+
+<div>
+  <h2>Posts</h2>
+
+  <!-- Display all posts -->
+  <div *ngFor="let post of posts">
+    <div>{{ post.comment }}</div>
+    <div>{{ post.username }}</div>
+    <button
+      *ngIf="post.username === getCurrentUser()"
+      (click)="deletePost(post)"
+    >
+      Delete
+    </button>
+  </div>
+
+  <!-- Add a new post -->
+  <form [formGroup]="postForm" (ngSubmit)="addPost()">
+    <textarea
+      rows="4"
+      cols="50"
+      formControlName="comment"
+      placeholder="Add a new post"
+    ></textarea>
+    <button type="submit">Add Post</button>
+  </form>
+</div>
