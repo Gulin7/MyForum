@@ -6,7 +6,6 @@ import { SeeTopicsComponent } from './pages/see-topics/see-topics.component';
 import { TopicPostsComponent } from './pages/topic-posts/topic-posts.component';
 
 export const routes: Routes = [
-  { path: '', redirectTo: '/login', pathMatch: 'full' },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'topics', component: SeeTopicsComponent },

@@ -22,7 +22,7 @@ export class LoginComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    // Check if user is already logged in
+    // Check if user is already logged inzzz
     if (localStorage.getItem('user')) {
       this.router.navigate(['/topics']);
     } else {
