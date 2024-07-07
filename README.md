@@ -1,15 +1,17 @@
-# Simple Forum Backend API
+# Simple Forum WebApp 
 
-This is a Spring Boot backend API for a simple forum application with authentication. The application provides endpoints for user registration, login, posting, and retrieving forum topics and posts.
+Forum webapp made with Spring Boot and MongoDB on the backend and Angular for the frontend.
 
 ## Features
 
 - User registration and authentication (JWT)
 - Create topics
 - Create and delete posts
+- View topic and the posts for each topic.
 
 ## Technologies Used
 
 - Spring Boot
-- Spring Data MongoDB
+- MongoDB (Spring Data)
 - Maven
+- Angular
